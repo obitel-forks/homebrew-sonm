@@ -9,9 +9,15 @@ class Sonm < Formula
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--prefix=#{prefix}"
-   system "unzip ~/Library/Caches/Homebrew/sonm-64.zip  ~/Library/Caches/Homebrew/ -j"
-   system "mv ~/Library/Caches/Homebrew/sonm_v0.3.0_darwin64 /usr/local/Cellar/sonm"
-   system "cd /usr/local/Cellar/sonm", "cp ./*.yaml ~/.sonm/", "mv ./*.yaml ./*.yaml.template"
+   #system "unzip ~/Library/Caches/Homebrew/sonm-64.zip  ~/Library/Caches/Homebrew/ -j"
+   system "cd /usr/local/Cellar/sonm_v0.3.0_darwin64"
+   system "mkdir ~/.sonm"
+   system "cp /usr/local/Cellar/sonm_v0.3.0_darwin64/cli/cli.yaml ~/.sonm/cli.yaml"
+   system "cp /usr/local/Cellar/sonm_v0.3.0_darwin64/hub/hub.yaml ~/.sonm/hub.yaml"
+   system "cp /usr/local/Cellar/sonm_v0.3.0_darwin64/node/node.yaml ~/.sonm/node.yaml"
+   system "cp /usr/local/Cellar/sonm_v0.3.0_darwin64/cli/worker.yaml ~/.sonm/worker.yaml"
+     
+   
 
    system "cd /usr/local", "ln -s bin"
    #system "ln ./sonm/cli/sonmcli_darwin64 "
