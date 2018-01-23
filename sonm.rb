@@ -13,7 +13,7 @@ class Sonm < Formula
    system "mv ~/Library/Caches/Homebrew/sonm_v0.3.0_darwin64 /usr/local/Cellar/sonm"
    system "cd /usr/local/Cellar/sonm", "cp ./*.yaml ~/.sonm/", "mv ./*.yaml ./*.yaml.template"
 
-   #system "cd /usr/local/Cellar/sonm/64", "unzip ./sonm_v0.3.0_darwin64.zip ./sonm"
+   system "cd /usr/local", "ln -s bin"
    #system "ln ./sonm/cli/sonmcli_darwin64 "
     
    
