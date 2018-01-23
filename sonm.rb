@@ -1,6 +1,6 @@
 class Sonm < Formula
   desc "Supercomputer Organized by Network Mining"
-  homepage "https://sonm.io"
+  homepage "https://sonm.com"
   url "https://github.com/sonm-io/core/releases/download/v0.3.0/sonm_v0.3.0_darwin64.zip"
     sha256 "cfb6a36ae8dab5a84be5c0f28247bc2ce973546752f3d136d5a813cc81b536e0"
    depends_on "docker"
@@ -26,13 +26,10 @@ end
 
   end
 bottle do   
-  root_url "https://example.com"   
-  prefix "/opt/homebrew"   
+  root_url "https://sonm.com"   
+  prefix "/sonm/64"   
   cellar "/opt/homebrew/Cellar"   
-  revision 4   
-  sha256 "4921af80137af9cc3d38fd17c9120da882448a090b0a8a3a19af3199b415bfca" => :yosemite   
-  sha256 "c71db15326ee9196cd98602e38d0b7fb2b818cdd48eede4ee8eb827d809e09ba" => :mavericks   
-  sha256 "85cc828a96735bdafcf29eb6291ca91bac846579bcef7308536e0c875d6c81d7" => :mountain_lion 
+  revision 4
 end
 
 end
