@@ -29,7 +29,7 @@ bottle do
   root_url "https://sonm.com"   
   prefix "/sonm/64"   
   cellar "/opt/homebrew/Cellar"   
-  revision 4
+  # revision 4
 end
 
 end
