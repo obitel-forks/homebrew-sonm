@@ -10,12 +10,13 @@ class Sonm < Formula
                           "--disable-silent-rules",
                           "--prefix=#{prefix}"
    #system "unzip ~/Library/Caches/Homebrew/sonm-64.zip  ~/Library/Caches/Homebrew/ -j"
-   system "cd /usr/local/Cellar/sonm_v0.3.0_darwin64"
+   system "cd /usr/local/Cellar/", "mv ./sonm_v0.3.0_darwin64 ./sonm"
    system "mkdir ~/.sonm"
-   system "cp /usr/local/Cellar/sonm_v0.3.0_darwin64/cli/cli.yaml ~/.sonm/cli.yaml"
-   system "cp /usr/local/Cellar/sonm_v0.3.0_darwin64/hub/hub.yaml ~/.sonm/hub.yaml"
-   system "cp /usr/local/Cellar/sonm_v0.3.0_darwin64/node/node.yaml ~/.sonm/node.yaml"
-   system "cp /usr/local/Cellar/sonm_v0.3.0_darwin64/cli/worker.yaml ~/.sonm/worker.yaml"
+   system "cp /usr/local/Cellar/sonm/cli/cli.yaml ~/.sonm/cli.yaml"
+   system "cp /usr/local/Cellar/sonm/hub/hub.yaml ~/.sonm/hub.yaml"
+   system "cp /usr/local/Cellar/sonm/node/node.yaml ~/.sonm/node.yaml"
+   system "cp /usr/local/Cellar/sonm/cli/worker.yaml ~/.sonm/worker.yaml"
+     
      
    
 
@@ -39,7 +40,7 @@ end
   end
 bottle do   
   root_url "https://sonm.com"   
-  prefix "sonm_v0.3.0_darwin64"   
+  prefix "sonm"   
   cellar "/opt/homebrew/Cellar"   
   #revision 1		
 end
