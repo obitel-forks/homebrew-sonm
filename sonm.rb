@@ -9,9 +9,13 @@ class Sonm < Formula
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--prefix=#{prefix}"
-    system "unzip ~/Library/Caches/Homebrew/sonm-64.zip /usr/local/Cellar/sonm"
+   system "unzip ~/Library/Caches/Homebrew/sonm-64.zip  ~/Library/Caches/Homebrew/"
+   system "mv ~/Library/Caches/Homebrew/sonm_v0.3.0_darwin64 /usr/local/Cellar/sonm"
+   system "cd /usr/local/Cellar/sonm", "cp ./*.yaml ~/.sonm/", "mv ./*.yaml ./*.yaml.template"
+
    #system "cd /usr/local/Cellar/sonm/64", "unzip ./sonm_v0.3.0_darwin64.zip ./sonm"
    #system "ln ./sonm/cli/sonmcli_darwin64 "
+    
    
 end
    test do
